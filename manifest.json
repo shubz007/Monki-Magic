@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Monkey Magic",
+  "version": "1.0",
+  "description": "A fun monkey follows your cursor!",
+  "permissions": [],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["monkey.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["images/monkey.png"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "48": "images/monkey.png"
+  }
+}

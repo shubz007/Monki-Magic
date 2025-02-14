@@ -1,0 +1,1 @@
+console.log("Monkey Magic extension is running in the background.");
